@@ -11,3 +11,10 @@ This extension has three commands:
 - **Add Duck entry** adds a new entry to your daily Markdown file.
 - **View today's Duck entry** shows the contents of today's file in Raycast.
 - **Query Duck log** uses OpenAI to query any daily entry or your full database. (disclaimer: I haven't tested it with large amounts of text yet) Add your OpenAI API key in the extension's preferences to enable this command.
+
+## Installation
+
+I'll wrap this up soon and publish it to Raycast, but for now:
+
+1. Download this repo
+2. In Raycast, run "Import Extension" and open this repo on your disk
