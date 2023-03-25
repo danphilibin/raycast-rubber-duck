@@ -16,9 +16,9 @@ export default function Command(props: LaunchProps<{ draftValues: FormValues }>)
           <Action.SubmitForm
             onSubmit={async (values: FormValues) => {
               writeMarkdownEntry(values.note);
+              await showHUD("Note saved.");
               closeMainWindow();
               popToRoot();
-              showHUD("Note saved.");
             }}
           />
         </ActionPanel>
