@@ -1,0 +1,65 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "duck",
+  "title": "Duck",
+  "description": "Rubber ducking utility with AI-assist.",
+  "icon": "extension_icon.png",
+  "author": "danphilibin",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "newEntry",
+      "title": "Add Duck entry",
+      "description": "Add a new Duck entry.",
+      "mode": "view"
+    },
+    {
+      "name": "today",
+      "title": "View today's Duck entry",
+      "description": "View today's Duck entry.",
+      "mode": "view"
+    },
+    {
+      "name": "query",
+      "title": "Query Duck log",
+      "description": "Query the contents of your Duck log.",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "storageLocation",
+      "title": "Storage location",
+      "description": "Where to store your Duck entries. Entries are appended to a daily Markdown file.",
+      "type": "textfield",
+      "required": true,
+      "default": "~/Documents/Duck"
+    },
+    {
+      "name": "openAiApiKey",
+      "title": "OpenAI API key",
+      "description": "(Optional) Add your OpenAI API key to use AI to query your entries.",
+      "type": "password",
+      "required": false
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.48.9",
+    "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "1.0.5",
+    "@types/node": "18.8.3",
+    "@types/react": "18.0.9",
+    "eslint": "^7.32.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}
